@@ -18,8 +18,8 @@ export default function AboutMe({ darkMode }) {
         <img
           src={
             darkMode
-              ? "/Images/Untitled design (14).png"
-              : "/Images/Untitled design (15).png"
+              ? "/Images/dark.png"
+              : "/Images/light.png"
           }
         />
       </div>
