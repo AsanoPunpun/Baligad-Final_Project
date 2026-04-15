@@ -1,35 +1,29 @@
-import React from 'react';
-
-const AboutMe = () => {
+export default function AboutMe({ darkMode }) {
   return (
-    <div id="about" className="main-container">
+    <div className="card" id="about">
 
-      <div className="info-section">
-        <div className="content-box">
-          <h2>About Me</h2>
-          <p><strong>Name:</strong> Jamaika Baligad</p>
-          <p><strong>Age:</strong> 21 years old</p>
-          <p>
-            I like learning foreign languages. I know how to speak a bit of
-            Japanese and Bahasa Indonesia.
-          </p>
+      <div className="content">
 
-          <h3>Contact Information</h3>
-          <p>
-            <strong>Email:</strong>{" "}
-            <a href="mailto:jamaikabaligad@gmail.com">
-              jamaikabaligad@gmail.com
-            </a>
-          </p>
-        </div>
+        <h2>About Me</h2>
+        <p><b>Name:</b> Jamaika Baligad</p>
+        <p><b>Age:</b> 21</p>
+
+        <p>
+          I like learning languages like Japanese and Bahasa Indonesia.
+        </p>
+
       </div>
 
-      <div className="image-section">
-        <img src="/Images/Tootiecactuss.jpg" alt="Profile" />
+      <div className="image">
+        <img
+          src={
+            darkMode
+              ? "/Images/Untitled design (14).png"
+              : "/Images/Untitled design (15).png"
+          }
+        />
       </div>
 
     </div>
   );
-};
-
-export default AboutMe;
+}
