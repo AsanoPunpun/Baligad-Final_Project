@@ -1,10 +1,11 @@
-export default function AboutMe({ darkMode }) {
+export default function AboutMe() {
   return (
     <div className="card" id="about">
 
       <div className="content">
 
         <h2>About Me</h2>
+
         <p><b>Name:</b> Jamaika Baligad</p>
         <p><b>Age:</b> 21</p>
 
@@ -15,13 +16,7 @@ export default function AboutMe({ darkMode }) {
       </div>
 
       <div className="image">
-        <img
-          src={
-            darkMode
-              ? "/Images/dark.png"
-              : "/Images/light.png"
-          }
-        />
+        <img src="/Images/Untitled-design-14.png" alt="Profile" />
       </div>
 
     </div>

@@ -28,11 +28,12 @@ export default function Page() {
 
       <div className="layout">
 
-        <section id="about"><AboutMe darkMode={darkMode} /></section>
-        <section id="education"><Education darkMode={darkMode} /></section>
-        <section id="experience"><Experience darkMode={darkMode} /></section>
-        <section id="skills"><Skills darkMode={darkMode} /></section>
-        <section id="contact"><Contact darkMode={darkMode} /></section>
+        {/* ❗ FIX: remove darkMode props */}
+        <section id="about"><AboutMe /></section>
+        <section id="education"><Education /></section>
+        <section id="experience"><Experience /></section>
+        <section id="skills"><Skills /></section>
+        <section id="contact"><Contact /></section>
 
       </div>
 
