@@ -15,8 +15,23 @@ export default function AboutMe() {
 
       </div>
 
+      {/* IMAGES (STATIC VERSION - SAFE FOR VERCEL) */}
       <div className="image">
-        <img src="/Images/Untitled-design-14.png" alt="Profile" />
+
+        {/* DARK MODE IMAGE */}
+        <img
+          src="/Images/dark.png"
+          alt="Dark Mode Profile"
+          className="dark-img"
+        />
+
+        {/* LIGHT MODE IMAGE */}
+        <img
+          src="/Images/light.png"
+          alt="Light Mode Profile"
+          className="light-img"
+        />
+
       </div>
 
     </div>

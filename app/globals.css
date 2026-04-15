@@ -10,11 +10,13 @@ body {
 .app.dark {
   background: #001033;
   color: white;
+  min-height: 100vh;
 }
 
 .app.light {
   background: #ffffff;
   color: #0f172a;
+  min-height: 100vh;
 }
 
 /* ======================
@@ -24,6 +26,7 @@ body {
 .nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 12px;
   padding: 20px;
   flex-wrap: wrap;
@@ -36,6 +39,7 @@ body {
   font-weight: bold;
   background: #1e3a8a;
   color: white;
+  transition: 0.2s;
 }
 
 .app.light .nav a {
@@ -44,18 +48,21 @@ body {
 }
 
 .nav a:hover {
-  opacity: 0.8;
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
+/* toggle button */
 .toggle {
   padding: 10px 14px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* ======================
-   LAYOUT (FIX UGLY CENTERING)
+   LAYOUT
 ====================== */
 
 .layout {
@@ -66,16 +73,20 @@ body {
 }
 
 /* ======================
-   SECTION CARD (MAIN FIX)
+   CARD DESIGN
 ====================== */
 
 .card {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
+
   padding: 25px;
   border-radius: 16px;
   margin-bottom: 20px;
+
+  transition: 0.3s ease;
 }
 
 /* DARK CARD */
@@ -89,7 +100,7 @@ body {
 }
 
 /* ======================
-   CONTENT BOX
+   CONTENT
 ====================== */
 
 .content {
@@ -100,6 +111,7 @@ body {
 .image img {
   width: 220px;
   border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 /* ======================
@@ -110,18 +122,58 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 10px;
+  margin-top: 10px;
 }
 
 .box {
   padding: 10px;
   border-radius: 10px;
   text-align: center;
+  transition: 0.2s;
 }
 
+/* DARK BOX */
 .app.dark .box {
   background: #13264a;
 }
 
+/* LIGHT BOX */
 .app.light .box {
   background: #eaf0ff;
+}
+
+.box:hover {
+  transform: translateY(-3px);
+}
+
+/* ======================
+   DARK / LIGHT IMAGE SWITCH
+====================== */
+
+.dark-img,
+.light-img {
+  display: none;
+}
+
+.app.dark .dark-img {
+  display: block;
+}
+
+.app.light .light-img {
+  display: block;
+}
+
+/* ======================
+   MOBILE RESPONSIVE
+====================== */
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image img {
+    width: 180px;
+  }
 }
